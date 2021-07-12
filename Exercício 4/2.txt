@@ -1,0 +1,25 @@
+2. Faça uma função que recebe por parâmetro um valor
+inteiro e positivo e retorna o valor lógico Verdadeiro
+caso o valor seja primo e Falso em caso contrário.
+
+import "dart:math";
+
+void main() {
+  numerosPrimos(5);
+}
+
+void numerosPrimos(var a) {
+  var resultado = 0;
+  for (var i = 2; i <= a / 2; i++) {
+    if (a % i == 0) {
+      resultado++;
+      break;
+    }
+  }
+
+  if (resultado == 0) {
+    print('O número $a é um número primo.');
+  } else {
+    print('O número $a não é um número primo.');
+  }
+}
